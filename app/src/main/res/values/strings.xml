@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">Campgrounds</string>
-    <string name="search">Search</string>
-    <string name="cache_offline">Save data for offline use</string>
-    <string name="offline_banner">You are offline</string>
+    <string name="app_name">Parks and Campgrounds</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_header">Latest NPS News</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="dark_mode_summary">Use a dark theme throughout the app. Saved for next time.</string>
 </resources>

@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'org.jetbrains.kotlin.plugin.serialization'
-    id 'kotlin-kapt'
 }
 
 
@@ -12,11 +11,11 @@ def apikeyProperties = new Properties()
 apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
 android {
-    namespace "com.codepath.campgrounds"
+    namespace "com.codepath.lab6"
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.codepath.campgrounds"
+        applicationId "com.codepath.campground"
         minSdk 23
         targetSdk 34
         versionCode 1
@@ -64,11 +63,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
-    def room_version = "2.4.2"
-    implementation "androidx.room:room-runtime:$room_version"
-    implementation "androidx.room:room-ktx:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    implementation 'androidx.fragment:fragment-ktx:1.5.0'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 }
