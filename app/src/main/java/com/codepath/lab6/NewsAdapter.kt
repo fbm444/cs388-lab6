@@ -40,12 +40,10 @@ class NewsAdapter(private val context: Context, private val news: List<NewsRelea
             newsParkTextView.text = release.parkCode?.uppercase()
             newsAbstractTextView.text = release.abstract
 
-            // Not every news release has a photo
             newsImageView.visibility = if (release.imageUrl != null) View.VISIBLE else View.GONE
             Glide.with(context).load(release.imageUrl).into(newsImageView)
         }
 
-        // Open the full news release on nps.gov
         override fun onClick(v: View?) {
             val url = news[absoluteAdapterPosition].url
             if (url.isNullOrEmpty()) return

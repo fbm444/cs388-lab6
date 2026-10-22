@@ -12,7 +12,6 @@ import com.google.android.material.switchmaterial.SwitchMaterial
 const val SETTINGS_PREFS = "settings"
 const val DARK_MODE_KEY = "dark_mode"
 
-// Applies the saved dark mode setting to the whole app
 fun applyDarkMode(context: Context) {
     val darkMode = context.getSharedPreferences(SETTINGS_PREFS, Context.MODE_PRIVATE)
         .getBoolean(DARK_MODE_KEY, false)

@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     private val settingsFragment = SettingsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Apply the saved dark mode setting before any views are created
         applyDarkMode(this)
         super.onCreate(savedInstanceState)
 
@@ -44,9 +43,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        // Default tab so the screen isn't blank on launch. After a rotation (or a
-        // dark mode switch) the FragmentManager restores the current fragment and
-        // the bottom nav restores its selected tab, so we leave both alone.
+        // Default tab so the screen isn't blank on launch
         if (savedInstanceState == null) {
             binding.bottomNavigation.selectedItemId = R.id.nav_home
         }

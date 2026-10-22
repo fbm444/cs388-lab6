@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="16dp">
 
-        <!-- Park or Campground Image (fixed height so the text below stays visible) -->
+        <!-- Park or Campground Image -->
         <ImageView
             android:id="@+id/detailImage"
             android:layout_width="0dp"
@@ -41,6 +41,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detailImage" />
 
+        <TextView
+            android:id="@+id/detailLatLong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="Lat: 00.000, Long: 00.000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailTitle" />
+
         <!-- Description -->
         <TextView
             android:id="@+id/detailDescription"
@@ -54,7 +69,7 @@
             android:textColor="?android:attr/textColorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detailTitle" />
+            app:layout_constraintTop_toBottomOf="@id/detailLatLong" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

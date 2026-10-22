@@ -29,7 +29,6 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Restore the list after a rotation so we don't have to fetch it again
         savedInstanceState?.getString(NEWS_STATE_KEY)?.let {
             news.clear()
             news.addAll(createJson().decodeFromString(ListSerializer(NewsRelease.serializer()), it))

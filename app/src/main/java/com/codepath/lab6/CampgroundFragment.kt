@@ -34,7 +34,6 @@ class CampgroundFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Restore the list after a rotation so we don't have to fetch it again
         savedInstanceState?.getString(CAMPGROUNDS_STATE_KEY)?.let {
             campgrounds.clear()
             campgrounds.addAll(createJson().decodeFromString(ListSerializer(Campground.serializer()), it))

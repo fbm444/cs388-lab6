@@ -29,7 +29,6 @@ class ParksFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Restore the list after a rotation so we don't have to fetch it again
         savedInstanceState?.getString(PARKS_STATE_KEY)?.let {
             parks.clear()
             parks.addAll(createJson().decodeFromString(ListSerializer(Park.serializer()), it))
